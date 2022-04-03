@@ -29,23 +29,23 @@
 # 30
 
 # 첫번째 시도
-case_Count = int(input())
-case_List = []
-answer = []
-for put_in in range(case_Count):
-    case_List.append(list(input()))
-for case in case_List:
-    plus = 0
-    total = 0
-    for score in case:
-        if score == "O":
-            plus += 1
-            total += plus
-        elif i == "X":
-            plus = 0
-    answer.append(total)
-for ans in answer:
-    print(ans)
+# case_Count = int(input())
+# case_List = []
+# answer = []
+# for put_in in range(case_Count):
+#     case_List.append(list(input()))
+# for case in case_List:
+#     plus = 0
+#     total = 0
+#     for score in case:
+#         if score == "O":
+#             plus += 1
+#             total += plus
+#         elif i == "X":
+#             plus = 0
+#     answer.append(total)
+# for ans in answer:
+#     print(ans)
 
 # 두번째 제출
 n = int(input())
