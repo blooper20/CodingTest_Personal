@@ -14,4 +14,16 @@
 # 예제 출력 1
 # 1 0 -1 -1 2 -1 -1 -1 -1 4 3 -1 -1 7 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 
-alphabets = list(input().split())
+# 첫번째 시도
+# s = list(input())
+# alphabet = [-1] * 26
+# for a in s:
+#     alphabet[(ord(a) - 96 - 1)] = s.index(a)
+# print(alphabet)
+
+# 두번쨰 시도
+word = list(input())
+alphabet = [-1] * 26
+for a in word:
+    alphabet[(ord(a) - 97)] = word.index(a)
+print(*alphabet)
