@@ -48,3 +48,32 @@
 
 # 예제 출력 5
 # 3
+
+# 첫번째 시도
+# word = input()
+# sum = len(word)
+# print(sum)
+# if "c=" in word:
+#     sum -= 1
+# if "c-" in word:
+#     sum -= 1
+# if "dz=" in word:
+#     sum -= 1
+# if "d-" in word:
+#     sum -= 1
+# if "lj" in word:
+#     sum -= 1
+# if "nj" in word:
+#     sum -= 1
+# if "s=" in word:
+#     sum -= 1
+# if "z=" in word:
+#     sum -= 1
+# print(sum)
+
+# 정답
+croatia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+word = input()
+for c in croatia:
+    word = word.replace(c, 'a')
+print(len(word))
