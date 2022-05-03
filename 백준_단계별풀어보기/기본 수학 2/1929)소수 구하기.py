@@ -16,3 +16,35 @@
 # 7
 # 11
 # 13
+
+# 첫번째 시도
+# m, n = map(int, input().split())
+# sosu = []
+# for num in range(m,n+1):
+#     errorFlag = 0
+#     if num > 1:
+#         for i in range(2,num):
+#             if num % i == 0:
+#                 errorFlag += 1
+#                 break
+#         if errorFlag == 0:
+#             sosu.append(num)
+# for answer in sosu:
+#     print(answer)
+
+# 정답
+def isPrime(num):
+    if num == 1:
+        return False
+    else:
+        for i in range(2, int(num**0.5)+1):
+            if num % i == 0:
+                return False
+        return True
+
+
+m, n = map(int, input().split())
+
+for i in range(m, n+1):
+    if isPrime(i):
+        print(i)
