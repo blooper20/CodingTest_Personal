@@ -77,7 +77,7 @@
 # 예제 출력 4
 # 6
 
-# 첫번째 시도
+# 정답
 import sys
 input = sys.stdin.readline
 
