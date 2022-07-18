@@ -1,0 +1,48 @@
+# 문제
+# N-Queen 문제는 크기가 N × N인 체스판 위에 퀸 N개를 서로 공격할 수 없게 놓는 문제이다.
+# N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 작성하시오.
+
+# 입력
+# 첫째 줄에 N이 주어진다. (1 ≤ N < 15)
+
+# 출력
+# 첫째 줄에 퀸 N개를 서로 공격할 수 없게 놓는 경우의 수를 출력한다.
+
+# 예제 입력 1
+# 8
+
+# 예제 출력 1
+
+# 92
+
+# 정답
+def dfs(depth):
+    global count
+    if depth == n:
+        count += 1
+        return
+
+    for i in range(n):
+        if visited[i] == 0:  # 해당 자리에 퀸이 존재하는지 확인
+
+            graph[depth] = i  # 각 행마다 위치하는 퀸의 자리
+
+            t = True
+            for j in range(depth):   # graph의 개수만큼 for문을 돌려야하지만 어차피 depth랑 개수 똑같음
+                if abs(graph[depth]-graph[j]) == abs(depth-j):
+                    t = False
+                    break
+            if t:
+                print(graph, depth)
+                visited[i] = 1
+                dfs(depth+1)
+                visited[i] = 0
+
+
+n = int(input())
+
+graph = [0]*n
+visited = [0]*n
+
+count = 0
+dfs(0)
